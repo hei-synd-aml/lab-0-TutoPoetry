@@ -178,7 +178,9 @@ plt.show()
 
 
 ## Part III - Installing dependencies using poetry and the pyproject.toml file
+
 **NOTE**: you can test this section with the files provided in the folder "Test_Poetry_Part_III".
+
 The goal of this section is to show how to install dependencies using poetry and the `pyproject.toml` file.
 The typical scenario is when you clone a project from a repository that already has a `pyproject.toml` file with dependencies listed in it and you want to install them on a new machine.
 Requirements: Git, Python and Poetry installed on your machine (see [Part I](#part-i---installation)).
@@ -186,13 +188,14 @@ Requirements: Git, Python and Poetry installed on your machine (see [Part I](#pa
 
 1. Clone the Project
 
-Clone the project from the repository using Git. For example, to clone a project from GitHub, run:
+Clone the project that you want to run from its repository using Git (if you just want to test poetry, you can use the files provided in the folder "Test_Poetry_Part_III" and skip to the step 2).
+For example, to clone a project from GitHub, run:
 
 ```bash
 git clone <repository-url>
 ```
 
-2. Navigate to the Project Directory
+2. Navigate to the Project Directory.
 
 Navigate to the project directory using the `cd` command:
 
@@ -210,7 +213,7 @@ Run the following command to install the project dependencies using Poetry:
 poetry install
 ```
 
-Poetry will read the `pyproject.toml` file and install the required dependencies in a virtual environment.
+Poetry will read the `pyproject.toml` file and install the required dependencies in a virtual environment. Additional configuration are possible (such as the location of the virtual environment). For more information, see the [Poetry documentation](https://python-poetry.org/docs/configuration/#virtualenvsin-project).
 
 **That's it!** You have successfully installed the project dependencies using Poetry. Of course, you should also run the project to ensure everything is working as expected.
 To add new dependencies to the project, you can use the `poetry add` command followed by the package name.

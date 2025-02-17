@@ -8,7 +8,8 @@ Part III - Cloning an existing poject (created using poetry): cloning the projec
 
 ## Part I - Installation
 
-In this section, you will install the necessary tools to create and manage Python projects using Poetry. This is necessary for the subsequent parts of the tutorial. If you already have Python, Git, and Poetry installed, you can skip this section. 
+In this section, you will install the necessary tools to create and manage Python projects using Poetry. This is necessary for the subsequent parts of the tutorial.
+If you already have Python, Git, and Poetry installed, you can skip this section. 
 
 ### Install Python
 
@@ -37,7 +38,7 @@ Poetry is a package manager for Python that simplifies dependency management and
 
 #### Windows (PowerShell)
 
-Open PowerShell (Run as Administrator) and execute the following command:
+Open PowerShell (run as Administrator) and execute the following command:
 
 ```bash
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
@@ -177,6 +178,7 @@ plt.show()
 
 
 ## Part III - Installing dependencies using poetry and the pyproject.toml file
+**NOTE**: you can test this section with the files provided in the folder "Test_Poetry_Part_III".
 The goal of this section is to show how to install dependencies using poetry and the `pyproject.toml` file.
 The typical scenario is when you clone a project from a repository that already has a `pyproject.toml` file with dependencies listed in it and you want to install them on a new machine.
 Requirements: Git, Python and Poetry installed on your machine (see [Part I](#part-i---installation)).
@@ -227,7 +229,7 @@ To add new dependencies to the project, you can use the `poetry add` command fol
 
     4.6 Restart Visual Studio Code.
     
-    4.7 Open a terminal in Visual Studio Code, and you should see the name of the virtual environment in the terminal prompt or among the list of interpreters. If not, repeat steps 4.2 to 4.7. You should see a new environment tagged as "Virtual Env" (see below): ![VS Code virtual env](.\img\venvVSCode.png "VS Code virtual env").
+    4.7 Open a terminal in Visual Studio Code, and you should see the name of the virtual environment in the terminal prompt or among the list of interpreters. If the new environment is not visible, try to type `code .` in your terminal. If it is still not showing up, repeat steps 4.2 to 4.7. You should see a new environment tagged as "Virtual Env" (see below): ![VS Code virtual env](.\img\venvVSCode.png "VS Code virtual env").
 
     4.8 Run the project in Visual Studio Code to ensure everything is working correctly. The first time you run the project, it may be a bit slow.
 

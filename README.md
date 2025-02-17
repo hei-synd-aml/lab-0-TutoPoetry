@@ -1,6 +1,9 @@
 # Tutorial - Setting Up a Python Project with Poetry
 
-In this tutorial, you will be guided through the process of setting up a Python project using the `poetry` package manager. The goal is to create a well-structured project that is easy to maintain and share with others.
+![python env](.\img\python_environment.png "Dependency hell")
+Source: [xkcd](https://xkcd.com/1987/)
+
+In this tutorial, you will be guided through the process of setting up a Python project using the `poetry` package manager. The goal is to create a well-structured project that is easy to maintain and share with others (i.e., avoid "dependency hell", see picture above).
 This tutorial is divided into three parts:
 Part I - Installation: install Python, Git, and Poetry on your system (required for Part II and Part III).
 Part II - Creating the Environment: create a new project using poetry to manage dependences, modify the `pyproject.toml` file, install dependencies, and run a Jupyter notebook.

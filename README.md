@@ -92,8 +92,9 @@ This command creates a project structure like this:
 ml-poetry
 ├── pyproject.toml
 ├── README.md
-├── ml-poetry
-│   └── __init__.py
+├── src
+│   └── ml-poetry
+│       └── __init__.py
 └── tests
     └── __init__.py
 ```
@@ -106,16 +107,17 @@ Open `pyproject.toml` in a text editor and add the following at the end:
 [tool.poetry]
 package-mode = false
 ```
+If [tool.poetry] is already defined, simply add "package-mode = false" under it.
 
 This ensures the project is treated as a standalone environment rather than a package.
 
 [**Optional**]
 
-Poetry creates a virtual environment in a default directory that depends on you OS.
-If you want to change the location of the virtual environment, you run the following command in the terminal:
+Poetry creates a virtual environment in a default directory that depends on your OS.
+If you want to change the location of the virtual environment, run the following command in the terminal:
 
 ```bash
-virtualenvs.in-project = false
+poetry config virtualenvs.in-project true
 ```
 
 This tells Poetry to create the virtual environment inside a *.venv* directory in your project folder.

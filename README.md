@@ -1,6 +1,6 @@
 # Tutorial - Setting Up a Python Project with Poetry
 
-![python env](.\img\python_environment.png "Dependency hell")
+![python env](./img/python_environment.png "Dependency hell")
 Source: [xkcd](https://xkcd.com/1987/)
 
 In this tutorial, you will be guided through the process of setting up a Python project using the `poetry` package manager. The goal is to create a well-structured project that is easy to maintain and share with others (i.e., avoid "dependency hell", see picture above).
@@ -12,7 +12,7 @@ Part III - Cloning an existing poject (created using poetry): cloning the projec
 ## Part I - Installation
 
 In this section, you will install the necessary tools to create and manage Python projects using Poetry. This is necessary for the subsequent parts of the tutorial.
-If you already have Python, Git, and Poetry installed, you can skip this section. 
+If you already have Python, Git, and Poetry installed, you can skip this section.
 
 ### Install Python
 
@@ -50,8 +50,7 @@ Open PowerShell (run as Administrator) and execute the following command:
 If you installed Python via the Microsoft Store, replace `py` with `python` in the command above.
 
 Add Poetry to your PATH (on Windows add `APPDATA%\Python\Scripts` to the PATH environment variable). See image below:
-![win env](.\img\Env_variables.png "Environment Variables - Windows")
-
+![win env](./img/Env_variables.png "Environment Variables - Windows")
 
 #### Linux, macOS, Windows (WSL)
 
@@ -60,8 +59,8 @@ Run the following command:
 ```bash
 curl -sSL https://install.python-poetry.org | python3 -
 ```
-Add Poetry to your PATH (on Linux and macOS, add `$HOME/.local/bin` to the PATH environment variable).
 
+Add Poetry to your PATH (on Linux and macOS, add `$HOME/.local/bin` to the PATH environment variable).
 
 ##### Verify the Installation
 
@@ -118,6 +117,7 @@ If you want to change the location of the virtual environment, you run the follo
 ```bash
 virtualenvs.in-project = false
 ```
+
 This tells Poetry to create the virtual environment inside a *.venv* directory in your project folder.
 
 ### Step 3: Install Dependencies
@@ -144,16 +144,17 @@ Additional dependences can be added using again the `poetry add` command at late
 In Visual Studio Code (PyCharm instructions are below), create a new jupyter notebook (.ipynb file) in the `ml-poetry` folder.
 
 As interpreted, select the Python interpreter from the virtual environment created by Poetry. To do this:
+
 - Open the terminal in Visual Studio Code.
 - Run the command `poetry env info` to get the path to the virtual environment.
-    - If it doesn't work, try restarting Visual Studio Code.
+   - If it doesn't work, try restarting Visual Studio Code.
 - Use the command ctl+shift+p to open the command palette (on macOS, it's cmd+shift+p).
 - Type "Python: Select Interpreter" and select the option.
 - Click on "Enter interpreter path or browse" and paste the path to the virtual environment.
 - Select the Python interpreter from the virtual environment.
 - Open a terminal, and you should see the name of the virtual environment in the terminal prompt.
-    - otherwise, you can run the command `poetry shell` to activate the virtual environment.
-    - then `code .` to open Visual Studio Code.
+   - otherwise, you can run the command `poetry shell` to activate the virtual environment.
+   - then `code .` to open Visual Studio Code.
 
 ### Step 5: Run the Jupyter Notebook
 
@@ -179,7 +180,6 @@ plt.title('Sample Plot')
 plt.show()
 ```
 
-
 ## Part III - Installing dependencies using poetry and the pyproject.toml file
 
 **NOTE**: you can test this section with the files provided in the folder "Test_Poetry_Part_III".
@@ -187,7 +187,6 @@ plt.show()
 The goal of this section is to show how to install dependencies using poetry and the `pyproject.toml` file.
 The typical scenario is when you clone a project from a repository that already has a `pyproject.toml` file with dependencies listed in it and you want to install them on a new machine.
 Requirements: Git, Python and Poetry installed on your machine (see [Part I](#part-i---installation)).
-
 
 1. Clone the Project
 
@@ -222,46 +221,43 @@ Poetry will read the `pyproject.toml` file and install the required dependencies
 To add new dependencies to the project, you can use the `poetry add` command followed by the package name.
 
 4. Run the Project on Visual Studio Code
-
+   
     4.1 Open Visual Studio Code and navigate to the project directory.
-
+   
     4.2 Type `Ctrl+Shift+P` to open the command palette (on macOS, it's `Cmd+Shift+P`).
-
+   
     4.3 Type "Python: Select Interpreter" and select the option.
-
+   
     4.4 Click on "Enter interpreter path or browse" and paste the path to the virtual environment (to get the path to the virtual environment, in a terminal, run the command `poetry env info`).
-
+   
     4.5 Select the Python interpreter from the virtual environment (Windows: the `python.exe` file should be in the `Scripts` directory; MacOs, the path to the interpreter should be in the `bin` directory (*to be tested*)).
-
+   
     4.6 Restart Visual Studio Code.
-    
-    4.7 Open a terminal in Visual Studio Code, and you should see the name of the virtual environment in the terminal prompt or among the list of interpreters. If the new environment is not visible, try to type `code .` in your terminal. If it is still not showing up, repeat steps 4.2 to 4.7. You should see a new environment tagged as "Virtual Env" (see below): ![VS Code virtual env](.\img\venvVSCode.png "VS Code virtual env").
-
+   
+    4.7 Open a terminal in Visual Studio Code, and you should see the name of the virtual environment in the terminal prompt or among the list of interpreters. If the new environment is not visible, try to type `code .` in your terminal. If it is still not showing up, repeat steps 4.2 to 4.7. You should see a new environment tagged as "Virtual Env" (see below): ![VS Code virtual env](./img/venvVSCode.png "VS Code virtual env").
+   
     4.8 Run the project in Visual Studio Code to ensure everything is working correctly. The first time you run the project, it may be a bit slow.
 
 5. Run the Project on PyCharm (for a compelte guide see [Configure a Poetry environment](https://www.jetbrains.com/help/pycharm/poetry.html))
-
+   
     5.1 Open PyCharm and navigate to the project directory. To create a new virtual environment go to point 5.2. To reuse an existing virtual environment go to point 5.3.
-
+   
     5.2 The first time you open the project, PyCharm will ask you to select the path to the poetry executable. This is the same path that your added to the PATH environment variable during the installation of Poetry. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`.
-    
+   
     Attention, if you clicl "Ok", this will create a **new** virtual environment. This will create a new environment based on the `pyproject.toml` file. You can see the environment in the project settings under "Python Interpreter".  To use an existing environment on your machine, click on "Cancel". You can set the path to the poetry executable later in the project settings under "Python Interpreter":
-
-    ![PyCharm poetry exec](.\img\PyCharm_poetry_exec.png "PyCharm, set poetry exec").
-
-    
+   
+    ![PyCharm poetry exec](./img/PyCharm_poetry_exec.png "PyCharm, set poetry exec").
+   
     5.3 The first time you open the project, PyCharm will ask you to select the Python interpreter. Click on the "Configure Python Interpreter" link. "Add new interpreter" and slect "Add Local Interpreter...". Choose "Select existing" and as "Poetry" as type.
-
+   
     5.3 This will create a new environment based on the `pyproject.toml` file. You can see the environment in the project settings under "Python Interpreter". Now, you need to enter two paths.
-        
-        5.3.1 "Path to poetry" is the path to the poetry executable. This is the same path that your added to the PATH environment variable during the installation of Poetry. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`. In the field "Poetry env use", enter the path to the virtual environment. 
-
+   
+        5.3.1 "Path to poetry" is the path to the poetry executable. This is the same path that your added to the PATH environment variable during the installation of Poetry. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`. In the field "Poetry env use", enter the path to the virtual environment.
+       
         5.3.2 "Poetry env use" is the path to the virtual environment. To get the path to the virtual environment, in a terminal, run the command `poetry env info`. You can copy the path to the virtual environment and paste it in the field "Poetry env use". After step 5.3.2, your configuration should look like this:
-
-    ![PyCharm poetry venv](.\img\PyCharm_poetry_venv.png "PyCharm, use existing env").
-
+   
+    ![PyCharm poetry venv](./img/PyCharm_poetry_venv.png "PyCharm, use existing env").
+   
     5.4 Wait for the indexing to finish. You can see the progress in the lower right corner of the PyCharm window. This may take a few minutes.
-
+   
     5.5 Run the project in PyCharm to ensure everything is working correctly. The first time you run the project, it may be a bit slow.
-
-    

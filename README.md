@@ -236,7 +236,7 @@ To add new dependencies to the project, you can use the `poetry add` command fol
    
     4.6 Restart Visual Studio Code.
    
-    4.7 Open a terminal in Visual Studio Code, and you should see the name of the virtual environment in the terminal prompt or among the list of interpreters. If the new environment is not visible, try to type `code .` in your terminal. If it is still not showing up, repeat steps 4.2 to 4.7. You should see a new environment tagged as "Virtual Env" (see below): ![VS Code virtual env](./img/venvVSCode.png "VS Code virtual env").
+    4.7 Open a terminal in Visual Studio Code, and you should see the name of the virtual environment in the terminal prompt or among the list of interpreters. If the new environment is not visible, try to type `code .` in your terminal. If it is still not showing up, repeat steps 4.2 to 4.7. You should see a new environment tagged as "Virtual Env" (see below): ![VS Code virtual env](./img/venvVSCode.png "VS Code virtual env")
    
     4.8 Run the project in Visual Studio Code to ensure everything is working correctly. The first time you run the project, it may be a bit slow.
 
@@ -248,7 +248,7 @@ To add new dependencies to the project, you can use the `poetry add` command fol
    
     Attention, if you clicl "Ok", this will create a **new** virtual environment. This will create a new environment based on the `pyproject.toml` file. You can see the environment in the project settings under "Python Interpreter".  To use an existing environment on your machine, click on "Cancel". You can set the path to the poetry executable later in the project settings under "Python Interpreter":
    
-    ![PyCharm poetry exec](./img/PyCharm_poetry_exec.png "PyCharm, set poetry exec").
+    ![PyCharm poetry exec](./img/PyCharm_poetry_exec.png "PyCharm, set poetry exec")
    
     5.3 The first time you open the project, PyCharm will ask you to select the Python interpreter. Click on the "Configure Python Interpreter" link. "Add new interpreter" and slect "Add Local Interpreter...". Choose "Select existing" and as "Poetry" as type.
    
@@ -258,7 +258,7 @@ To add new dependencies to the project, you can use the `poetry add` command fol
        
         5.3.2 "Poetry env use" is the path to the virtual environment. To get the path to the virtual environment, in a terminal, run the command `poetry env info`. You can copy the path to the virtual environment and paste it in the field "Poetry env use". After step 5.3.2, your configuration should look like this:
    
-    ![PyCharm poetry venv](./img/PyCharm_poetry_venv.png "PyCharm, use existing env").
+    ![PyCharm poetry venv](./img/PyCharm_poetry_venv.png "PyCharm, use existing env")
    
     5.4 Wait for the indexing to finish. You can see the progress in the lower right corner of the PyCharm window. This may take a few minutes.
    

@@ -219,6 +219,13 @@ poetry install
 
 Poetry will read the `pyproject.toml` file and install the required dependencies in a virtual environment. Additional configuration are possible (such as the location of the virtual environment). For more information, see the [Poetry documentation](https://python-poetry.org/docs/configuration/#virtualenvsin-project).
 
+NOTE: if you want to use VS Code, **do not close** the terminal after running the command. Instead, run the following command to open directly the project in Visual Studio Code:
+
+```bash
+code .
+```
+This will make *much easier* for Visual Studio Code to recognize the virtual environment created by Poetry (you will find more instructions in the next section).
+
 **That's it!** You have successfully installed the project dependencies using Poetry. Of course, you should also run the project to ensure everything is working as expected.
 To add new dependencies to the project, you can use the `poetry add` command followed by the package name.
 

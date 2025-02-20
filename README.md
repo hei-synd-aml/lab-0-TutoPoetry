@@ -110,8 +110,6 @@ The terminal will ask you a series of questions to set up the project. You can p
 
 ### Step 2: Modify the `pyproject.toml` File
 
-NOTE: skip this step if you have initialised a pre-existing project.
-
 Open `pyproject.toml` in a text editor and add the following at the end:
 
 ```toml
@@ -255,7 +253,15 @@ To add new dependencies to the project, you can use the `poetry add` command fol
    
     4.6 Restart Visual Studio Code.
    
-    4.7 Open a terminal in Visual Studio Code, and you should see the name of the virtual environment in the terminal prompt or among the list of interpreters. If the new environment is not visible, try to type `code .` in your terminal. If it is still not showing up, repeat steps 4.2 to 4.7. You should see a new environment tagged as "Virtual Env" (see below): ![VS Code virtual env](./img/venvVSCode.png "VS Code virtual env")
+    4.7 Open a terminal in Visual Studio Code, and you should see the name of the virtual environment in the terminal prompt or among the list of interpreters.
+        
+        4.7.1 If the new environment is not visible, try to type `code .` in your terminal.
+
+        4.7.2 If the new environment is still not visible, try to type `poetry env list`.
+
+        4.7.3 If it is still not showing up, repeat steps 4.2 to 4.7.
+    
+    4.8 You should see a new environment tagged as "Virtual Env" (see below): ![VS Code virtual env](./img/venvVSCode.png "VS Code virtual env")
    
     4.8 Run the project in Visual Studio Code to ensure everything is working correctly. The first time you run the project, it may be a bit slow.
 
@@ -282,3 +288,23 @@ To add new dependencies to the project, you can use the `poetry add` command fol
     5.4 Wait for the indexing to finish. You can see the progress in the lower right corner of the PyCharm window. This may take a few minutes.
    
     5.5 Run the project in PyCharm to ensure everything is working correctly. The first time you run the project, it may be a bit slow.
+
+
+## Part IV - Troubleshoting
+
+### Pytorch with CUDA
+This solution works for Windows (02.2024)
+
+Open the .toml file and add the following lines:
+```toml
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu118"
+priority = "explicit"
+```
+
+Then run: 
+```bash
+poetry add torch==2.6.0+cu118 --source pytorch
+```

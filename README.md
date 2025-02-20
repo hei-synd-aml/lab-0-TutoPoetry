@@ -297,7 +297,6 @@ This solution works for Windows (02.2024)
 
 Open the .toml file and add the following lines:
 ```toml
-
 [[tool.poetry.source]]
 name = "pytorch"
 url = "https://download.pytorch.org/whl/cu118"
@@ -306,5 +305,5 @@ priority = "explicit"
 
 Then run: 
 ```bash
-poetry add torch==2.6.0+cu118 --source pytorch
+poetry add torch==2.6.0+cu118 torchvision==0.21.0+cu118 torchaudio==2.6.0+cu118 --source pytorch
 ```

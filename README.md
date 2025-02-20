@@ -106,8 +106,11 @@ poetry init
 ```
 
 This will guide you to interactively create a pyproject.toml file in directory pre-existing-project.
+The terminal will ask you a series of questions to set up the project. You can press Enter to accept the default values (suggested between square brackets) or type your own values.
 
 ### Step 2: Modify the `pyproject.toml` File
+
+NOTE: skip this step if you have initialised a pre-existing project.
 
 Open `pyproject.toml` in a text editor and add the following at the end:
 
@@ -115,11 +118,12 @@ Open `pyproject.toml` in a text editor and add the following at the end:
 [tool.poetry]
 package-mode = false
 ```
+
 If [tool.poetry] is already defined, simply add "package-mode = false" under it.
 
 This ensures the project is treated as a standalone environment rather than a package.
 
-[**Optional**]
+### Step 2.5 (Optional): Change the Location of the Virtual Environment
 
 Poetry creates a virtual environment in a default directory that depends on your OS.
 If you want to change the location of the virtual environment, run the following command in the terminal:

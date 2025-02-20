@@ -78,9 +78,9 @@ You should see the version of Poetry installed, e.g., `Poetry (version 2.0.1)`.
 
 The goal of this section is to set up a virtual environment for your Machine Learning (ML) projects. Using Poetry, you can manage dependencies effectively, ensuring consistency across different systems and facilitating project sharing. This section is based on the official [Poetry Basic Usage Guide](https://python-poetry.org/docs/basic-usage/).
 
-### Step 1: Create a New Project
+### Step 1: Create a New Project or initialising a pre-existing project
 
-Navigate to your desired project directory and run:
+If you want to create a *new* project, navigate to your desired project directory and run:
 
 ```bash
 poetry new ml-poetry
@@ -98,6 +98,14 @@ ml-poetry
 └── tests
     └── __init__.py
 ```
+
+If you want to initialise a *pre-existing* project, navigate to the project directory and run:
+
+```bash
+poetry init
+```
+
+This will guide you to interactively create a pyproject.toml file in directory pre-existing-project.
 
 ### Step 2: Modify the `pyproject.toml` File
 

@@ -254,10 +254,10 @@ To add new dependencies to the project, you can use the `poetry add` command fol
     4.6 Restart Visual Studio Code.
    
     4.7 Open a terminal in Visual Studio Code, and you should see the name of the virtual environment in the terminal prompt or among the list of interpreters.
-        
-        4.7.1 If the new environment is not visible, try to type `code .` in your terminal.
 
-        4.7.2 If the new environment is still not visible, try to type `poetry env list`.
+        4.7.1 If the new environment is not visible, type `poetry env list` in your terminal.
+
+        4.7.2 If the new environment is still not visible, try to type `code .` in your terminal.
 
         4.7.3 If it is still not showing up, repeat steps 4.2 to 4.7.
     

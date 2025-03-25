@@ -256,9 +256,9 @@ To add new dependencies to the project, you can use the `poetry add` command fol
     4.7 Open a terminal in Visual Studio Code, and you should see the name of the virtual environment in the terminal prompt or among the list of interpreters.
 
         4.7.1 If the new environment is not visible, type `poetry env list` in your terminal.
-
+    
         4.7.2 If the new environment is still not visible, try to type `code .` in your terminal.
-
+    
         4.7.3 If it is still not showing up, repeat steps 4.2 to 4.7.
     
     4.8 You should see a new environment tagged as "Virtual Env" (see below): ![VS Code virtual env](./img/venvVSCode.png "VS Code virtual env")
@@ -269,9 +269,9 @@ To add new dependencies to the project, you can use the `poetry add` command fol
    
     5.1 Open PyCharm and navigate to the project directory. To create a new virtual environment go to point 5.2. To reuse an existing virtual environment go to point 5.3.
    
-    5.2 The first time you open the project, PyCharm will ask you to select the path to the poetry executable. This is the same path that your added to the PATH environment variable during the installation of Poetry. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`.
+    5.2 The first time you open the project, PyCharm will ask you to select the path to the poetry executable. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`.
    
-    Attention, if you clicl "Ok", this will create a **new** virtual environment. This will create a new environment based on the `pyproject.toml` file. You can see the environment in the project settings under "Python Interpreter".  To use an existing environment on your machine, click on "Cancel". You can set the path to the poetry executable later in the project settings under "Python Interpreter":
+    Attention, if you click "Ok", this will create a **new** virtual environment based on the `pyproject.toml` file. You can see the environment in the project settings under "Python Interpreter".  To use an existing environment on your machine, click on "Cancel". You can set the path to the poetry executable later in the project settings under "Python Interpreter":
    
     ![PyCharm poetry exec](./img/PyCharm_poetry_exec.png "PyCharm, set poetry exec")
    
@@ -279,7 +279,7 @@ To add new dependencies to the project, you can use the `poetry add` command fol
    
     5.3 This will create a new environment based on the `pyproject.toml` file. You can see the environment in the project settings under "Python Interpreter". Now, you need to enter two paths.
    
-        5.3.1 "Path to poetry" is the path to the poetry executable. This is the same path that your added to the PATH environment variable during the installation of Poetry. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`. In the field "Poetry env use", enter the path to the virtual environment.
+        5.3.1 "Path to poetry" is the path to the poetry executable. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`. In the field "Poetry env use", enter the path to the virtual environment.
        
         5.3.2 "Poetry env use" is the path to the virtual environment. To get the path to the virtual environment, in a terminal, run the command `poetry env info`. You can copy the path to the virtual environment and paste it in the field "Poetry env use". After step 5.3.2, your configuration should look like this:
    

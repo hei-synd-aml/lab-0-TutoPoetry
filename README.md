@@ -49,7 +49,7 @@ Open PowerShell (run as Administrator) and execute the following command:
 
 If you installed Python via the Microsoft Store, replace `py` with `python` in the command above.
 
-Add Poetry to your PATH (on Windows add `APPDATA%\Python\Scripts` to the PATH environment variable). See the image below:
+Add Poetry to your PATH (on Windows add `%APPDATA%\Python\Scripts` to the PATH environment variable). See the image below:
 ![win env](./img/Env_variables.png "Environment Variables - Windows")
 
 #### Linux, macOS, Windows (WSL)

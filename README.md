@@ -265,19 +265,17 @@ To add new dependencies to the project, you can use the `poetry add` command fol
    
     4.8 Run the project in Visual Studio Code to ensure everything is working correctly. The first time you run the project, it may be a bit slow.
 
-5. Run the Project on PyCharm (for a compelte guide see [Configure a Poetry environment](https://www.jetbrains.com/help/pycharm/poetry.html))
+5. Run the Project on PyCharm (for a complete guide see [Configure a Poetry environment](https://www.jetbrains.com/help/pycharm/poetry.html))
    
     5.1 Open PyCharm and navigate to the project directory. To create a new virtual environment go to point 5.2. To reuse an existing virtual environment go to point 5.3.
    
-    5.2 The first time you open the project, PyCharm will ask you to select the path to the poetry executable. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`.
+    5.2 [Create a new environment] The first time you open the project, PyCharm will ask you to select the path to the poetry executable. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`.
    
     Attention, if you click "Ok", this will create a **new** virtual environment based on the `pyproject.toml` file. You can see the environment in the project settings under "Python Interpreter".  To use an existing environment on your machine, click on "Cancel". You can set the path to the poetry executable later in the project settings under "Python Interpreter":
    
     ![PyCharm poetry exec](./img/PyCharm_poetry_exec.png "PyCharm, set poetry exec")
    
-    5.3 The first time you open the project, PyCharm will ask you to select the Python interpreter. Click on the "Configure Python Interpreter" link. "Add new interpreter" and slect "Add Local Interpreter...". Choose "Select existing" and as "Poetry" as type.
-   
-    5.3 This will create a new environment based on the `pyproject.toml` file. You can see the environment in the project settings under "Python Interpreter". Now, you need to enter two paths.
+    5.3 The first time you open the project, PyCharm will ask you to select the Python interpreter. Click on the "Configure Python Interpreter" link. "Add new interpreter" and slect "Add Local Interpreter...". Choose "Select existing" and as "Poetry" as type. This will create a new environment based on the `pyproject.toml` file. You can see the environment in the project settings under "Python Interpreter". Now, you need to enter two paths.
    
         5.3.1 "Path to poetry" is the path to the poetry executable. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`. In the field "Poetry env use", enter the path to the virtual environment.
        

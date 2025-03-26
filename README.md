@@ -74,6 +74,18 @@ You should see the version of Poetry installed, e.g., `Poetry (version 2.0.1)`.
 
 ---
 
+##### (Optional) Select the virtual environments folder
+
+Poetry creates a virtual environment in a default directory that depends on your OS.
+If you want Poetry to create the virtual environments in the project directory, run the following command in the terminal:
+
+```bash
+poetry config virtualenvs.in-project true
+```
+
+This tells Poetry to create the virtual environment inside a *.venv* directory in your project folder.
+
+
 ## Part II - Creating the Environment
 
 The goal of this section is to set up a virtual environment for your Machine Learning (ML) projects. Using Poetry, you can manage dependencies effectively, ensuring consistency across different systems and facilitating project sharing. This section is based on the official [Poetry Basic Usage Guide](https://python-poetry.org/docs/basic-usage/).
@@ -124,7 +136,7 @@ This ensures the project is treated as a standalone environment rather than a pa
 ### Step 2.5 (Optional): Change the Location of the Virtual Environment
 
 Poetry creates a virtual environment in a default directory that depends on your OS.
-If you want to change the location of the virtual environment, run the following command in the terminal:
+If you want Poetry to create the virtual environments in the project directory, run the following command in the terminal:
 
 ```bash
 poetry config virtualenvs.in-project true

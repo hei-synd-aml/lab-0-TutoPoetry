@@ -212,10 +212,9 @@ The goal of this section is to show how to install dependencies using poetry and
 The typical scenario is when you clone a project from a repository that already has a `pyproject.toml` file with dependencies listed in it and you want to install them on a new machine.
 Requirements: Git, Python and Poetry installed on your machine (see [Part I](#part-i---installation)).
 
-1. Clone the Project
+1. Clone the project that you want to run from its repository using Git.
 
-Clone the project that you want to run from its repository using Git (if you just want to test poetry, you can use the files provided in the folder "Test_Poetry_Part_III" and skip to the step 2).
-For example, to clone a project from GitHub, run:
+For example, to clone a project from GitHub/GirLab, run:
 
 ```bash
 git clone <repository-url>

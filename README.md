@@ -74,7 +74,7 @@ You should see the version of Poetry installed, e.g., `Poetry (version 2.0.1)`.
 
 ---
 
-##### (Optional) Select the virtual environments folder
+##### (Optional - one-off procedure) Embed poetry virtualenvs inside of project dir
 
 Poetry creates a virtual environment in a default directory that depends on your OS.
 If you want Poetry to create the virtual environments in the project directory, run the following command in the terminal:

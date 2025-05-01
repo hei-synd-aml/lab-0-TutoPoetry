@@ -133,7 +133,7 @@ To add new dependencies to the project, you can use the `poetry add` command fol
 
 4. Run the Project on PyCharm (for a complete guide see [Configure a Poetry environment](https://www.jetbrains.com/help/pycharm/poetry.html))
    
-    4.1 Open PyCharm and navigate to the project directory. To create a new virtual environment go to point 5.2. To reuse an existing virtual environment go to point 5.3.
+    4.1 Open PyCharm and navigate to the project directory. To create a new virtual environment go to point 4.2. To reuse an existing virtual environment go to point 4.3.
    
     4.2 [Create a new environment] The first time you open the project, PyCharm will ask you to select the path to the poetry executable. On Windows, it is typically `C:\Users\<username>\AppData\Roaming\Python\Scripts\poetry.exe`. On Linux and macOS, it is typically `$HOME/.local/bin/poetry`.
    
@@ -308,7 +308,7 @@ plt.show()
 
 ## Part IV - Troubleshoting
 
-### Pytorch with CUDA
+### 1. Pytorch with CUDA
 This solution works for Windows (02.2024)
 
 Open the .toml file and add the following lines:
@@ -323,3 +323,23 @@ Then run:
 ```bash
 poetry add torch==2.6.0+cu118 torchvision==0.21.0+cu118 torchaudio==2.6.0+cu118 --source pytorch
 ```
+
+### 2. Poetry and Windows
+
+After your run the command `poetry install`, you may encounter the following issue: 
+```bash
+Command '['C:\\Users\\yanni\\AppData\\Local\\Microsoft\\WindowsApps\\python.EXE', '-EsSc', 'import sys; print(sys.executable)']' returned non-zero exit status 9009.
+```
+This is a issue with Poetry and Windows. To fix it, you can try the following steps:
+
+1. Open the command prompt as an administrator.
+2. Run the command `poetry config virtualenvs.prefer-active-python true`.
+3. Run the command `poetry config virtualenvs.in-project true`.
+4. Run the command `poetry install` again.
+5. If the issue persists, try running the command `poetry env use python` to set the Python interpreter for the virtual environment.
+
+
+### 3. Poetry and PyCharm: jupyter server not found
+If when running the first time the project in PyCharm, you get the error `jupyter server not found` (or something similar), usually is because the path to the virtual environment is too long. Be sure that:
+- You have run the command `poetry config virtualenvs.in-project true`. 
+- The virtual environment is created in the project folder (i.e., `path_to_the_lab_folder/.venv`).

@@ -306,7 +306,7 @@ plt.show()
 ```
 
 
-## Part IV - Troubleshoting
+## Part IV - Troubleshooting
 
 ### 1. Pytorch with CUDA
 This solution works for Windows (02.2024)

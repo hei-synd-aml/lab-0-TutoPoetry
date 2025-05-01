@@ -85,7 +85,7 @@ poetry config virtualenvs.in-project true
 
 This tells Poetry to create the virtual environment inside a *.venv* directory in your project folder.
 
-## Part III - Installing dependencies using poetry and the pyproject.toml file
+## Part II - Installing dependencies using poetry and the pyproject.toml file
 
 **NOTE**: you can test this section with the files provided in the folder "Test_Poetry_Part_III".
 
@@ -179,7 +179,15 @@ To add new dependencies to the project, you can use the `poetry add` command fol
    
     5.9 Run the project in Visual Studio Code to ensure everything is working correctly. The first time you run the project, it may be a bit slow.
 
-## Part III - Creating the Environment
+---
+
+## Part III - Creating the Environment (OPTIONAL)
+
+This part is **NOT** necessary for the Labs. 
+
+If you just want to run a project that already has a `pyproject.toml` file, you are ready to go.
+
+This part is useful if you want to *create* a new project from scratch or if you want to modify an existing project.
 
 The goal of this section is to set up a virtual environment for your Machine Learning (ML) projects. Using Poetry, you can manage dependencies effectively, ensuring consistency across different systems and facilitating project sharing. This section is based on the official [Poetry Basic Usage Guide](https://python-poetry.org/docs/basic-usage/).
 
